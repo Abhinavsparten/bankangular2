@@ -22,16 +22,16 @@
             <form>
                 <i class="icon fas fa-envelope"></i>
             <div class="input mt-4 col-md-12 col-sm-12 ps-2 pe-2">
-            <input type="text" (change)="unameChange($event)" placeholder="Account Number" class="form-control inpu">
+            <input #uname type="text" (change)="unameChange($event)" placeholder="Account Number" class="form-control inpu">
             
         </div>
         <div class="pass mt-4 col-md-12 col-sm-12 ps-2 pe-2">
             <i class="icon fas fa-lock"></i>
-            <input type="password" placeholder="Password" class="form-control inpu ">
+            <input #psw type="password" placeholder="Password" class="form-control inpu ">
             
         </div>
         <div class="login mt-4 mb-4 col-md-12 col-sm-12 ps-2 pe-2">
-            <button (click)="login()" type="submit"  id="but" class="form-control">Login</button>
+            <button (click)="login(uname,psw)" type="submit"  id="but" class="form-control">Login</button>
             <div class="sign-txt text-white text-center mt-5 mb-5 col-md-12 col-sm-12">Not a member? <a href="#">Signup now</a></div>
         </div>
         </form>
